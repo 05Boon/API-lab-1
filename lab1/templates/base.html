@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Tenant portal{% endblock %}</title>
+    <style>
+        :root { color-scheme: light; --ink: #202723; --accent: #17684b; }
+        * { box-sizing: border-box; }
+        body { margin: 0; color: var(--ink); background: #f5f7f6; font-family: Georgia, serif; }
+        header { background: #fff; border-bottom: 1px solid #dce3df; }
+        nav, main { max-width: 960px; margin: auto; padding: 24px; }
+        nav { display: flex; flex-wrap: wrap; gap: 24px; }
+        a { color: var(--accent); text-underline-offset: 4px; }
+        main { padding-top: 56px; }
+        h1 { font-size: 32px; overflow-wrap: anywhere; }
+        p { line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="{% url 'tenant:home' %}">Home</a>
+            <a href="{% url 'tenant:list' %}">Tenants</a>
+        </nav>
+    </header>
+    <main>{% block content %}{% endblock %}</main>
+</body>
+</html>

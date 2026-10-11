@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Tenant portal{% endblock %}
+
+{% block content %}
+<h1>Tenant portal</h1>
+<p><a href="{% url 'tenant:list' %}">View tenant directory</a></p>
+{% endblock %}
